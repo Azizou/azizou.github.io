@@ -2,5 +2,5 @@ azizou.github.io
 ================
 Site setup
 
-<a href="http://azizou.github.io">have a look at my repo website</a>
+Have a look at<a href="http://azizou.github.io"> my repo </a>website.
 
