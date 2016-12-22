@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Engineering GPA (UCT) calculation</title>
+
+    <!-- Bootstrap -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="gpa.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body> 
+    <!-- <h1>Engineering GPA (UCT) calculation</h1> -->
+
+<br />
+      <div class="container">
+       <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation" class="active"><a href="#">Eng GPA</a></li>
+            <!-- <li role="presentation"><a href="#">About</a></li> -->
+          </ul>
+        </nav>
+        <h1 class="text-muted">Engineering GPA (UCT) calculation</h1>
+      </div>
+
+      <!-- <h1 class="form-signin-heading">Engineering GPA (UCT) calculation</h1> -->
+        <div class="jumbotron">
+        <p class="lead">To access the Term average page, first login to <a href="https://studentsonline.uct.ac.za">People soft</a>, then:<br />
+          <ol>
+            <li>Go to Self Service -> Academic Record -> Grade Averages from the drop down (Main Menu>Self Service>Academic Records>Grade Averages)</li>
+            <li>Click on Search without entering any data on the begins with field</li>
+            <li>Click on the first UGRD link on the result list</li>
+            <li>Click on Return to View My Grades at the bottom of the page (after the table with some courses)</li>
+            <li>Voila! You are now on the page with your averages for the current year. Use change term button at the top to get to choose a new academic term</li>
+          </ol>
+        </p>
+        </div>
+        <div id="gpa-form">
+          <form class="form" method="GET" action="javascript:ComputeEngGPA()">
+            
+            <label for="firstYearAvg" class="sr-only">First Year GPA:</label>
+            <input type="number" name="firstYearAvg" class="form-control" placeholder="First Year GPA" required>
+
+            <label for="secondYearAvg" class="sr-only">Second Year GPA:</label>
+            <input type="number" name="secondYearAvg" class="form-control" placeholder="Second Year GPA" required>
+
+            <label for="thirdYearAvg" class="sr-only">Third Year GPA:</label>
+            <input type="number" name="thirdYearAvg" class="form-control" placeholder="Third Year GPA" required>
+
+            <label for="fourthYearAvg" class="sr-only">Fourth Year GPA:</label>
+            <input type="number" name="fourthYearAvg" class="form-control" placeholder="Fourth Year GPA" required>
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Get Eng GPA</button>
+          </form>
+        </div>
+        <div id="result"></div>
+      </div> <!-- /container -->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
